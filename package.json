@@ -1,0 +1,28 @@
+{
+  "name": "cocproxy",
+  "description": "cocproxy on Node.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/azu/node-cocproxy/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/node-cocproxy.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node lib/cocproxy.js",
+    "test": "mocha test/*.js"
+  },
+  "directories": {
+    "test": "test/"
+  },
+  "author": "azu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azu/node-cocproxy/issues"
+  },
+  "dependencies": {
+    "hoxy": "^1.2.2",
+    "http-mitm-proxy": "git://github.com/joeferner/node-http-mitm-proxy",
+    "http-proxy": "^1.8.1"
+  }
+}
