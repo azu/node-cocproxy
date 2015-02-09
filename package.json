@@ -21,6 +21,13 @@
     "url": "https://github.com/azu/node-cocproxy/issues"
   },
   "dependencies": {
-    "hoxy": "^1.2.2"
+    "hoxy": "^1.2.2",
+    "object-assign": "^2.0.0"
+  },
+  "devDependencies": {
+    "espower-loader": "^0.10.0",
+    "intelli-espower-loader": "^0.6.0",
+    "mocha": "^2.1.0",
+    "power-assert": "^0.10.1"
   }
 }
