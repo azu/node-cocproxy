@@ -1,6 +1,9 @@
-# Project Name
+# node-CocProxy
 
-- [ ] Write a project description
+Convention over Configuration written in Node.js.
+
+- [CocProxy – CodeRepos::Share – Trac](http://coderepos.org/share/wiki/CocProxy "CocProxy – CodeRepos::Share – Trac") Ruby
+- [cocproxy for nginx](https://gist.github.com/hotchpotch/990354 "cocproxy for nginx") Nginx
 
 ## Installation
 
