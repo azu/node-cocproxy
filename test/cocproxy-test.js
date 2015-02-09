@@ -4,6 +4,8 @@ var CocProxy = require("../lib/cocproxy").CocProxy;
 var assert = require("power-assert");
 var http = require("http");
 var fs = require("fs");
+var path = require("path");
+var fixtureDir = path.join(__dirname, "fixtures/");
 describe("CocProxy", function () {
     var cocProxy;
     beforeEach(function () {
@@ -17,13 +19,15 @@ describe("CocProxy", function () {
         assert(cocProxy.options.port === 8087);
     });
     describe("request-interceptor", function () {
-        beforeEach(function () {
-            cocProxy.start()
-        });
         context("when found the file is match the url", function () {
+            beforeEach(function () {
+                cocProxy = new CocProxy({
+                    mockFileDir : fixtureDir
+                });
+                cocProxy.start()
+            });
             it("should return the content of local file", function (done) {
                 http.get("http://localhost:8087/http://example.com/script.js", function (res) {
-                    console.log("Got response: " + res.statusCode);
                     var body = '';
                     res.setEncoding('utf8');
                     res.on('data', function (chunk) {
@@ -35,11 +39,6 @@ describe("CocProxy", function () {
                         done();
                     });
                 }).on('error', done);
-            });
-        });
-        context("when not exits the file", function () {
-            it("should return original content", function () {
-
             });
         });
     });
