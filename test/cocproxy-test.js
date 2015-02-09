@@ -3,6 +3,7 @@
 var CocProxy = require("../lib/cocproxy").CocProxy;
 var assert = require("power-assert");
 var http = require("http");
+var fs = require("fs");
 describe("CocProxy", function () {
     var cocProxy;
     beforeEach(function () {
@@ -21,7 +22,7 @@ describe("CocProxy", function () {
         });
         context("when found the file is match the url", function () {
             it("should return the content of local file", function (done) {
-                http.get("http://localhost:8087/http://www.google.com/index.html", function (res) {
+                http.get("http://localhost:8087/http://example.com/script.js", function (res) {
                     console.log("Got response: " + res.statusCode);
                     var body = '';
                     res.setEncoding('utf8');
@@ -29,7 +30,8 @@ describe("CocProxy", function () {
                         body += chunk;
                     });
                     res.on('end', function (res) {
-                        assert.equal(body, fs.readFileSync(__dirname + "/fixture/example.com/script.js", "utf-8"));
+                        var expected = fs.readFileSync(__dirname + "/fixtures/example.com/script.js", "utf-8");
+                        assert.equal(body, expected);
                         done();
                     });
                 }).on('error', done);
