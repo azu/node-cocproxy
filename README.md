@@ -5,6 +5,15 @@ Convention over Configuration written in Node.js.
 - [CocProxy – CodeRepos::Share – Trac](http://coderepos.org/share/wiki/CocProxy "CocProxy – CodeRepos::Share – Trac") Ruby
 - [cocproxy for nginx](https://gist.github.com/hotchpotch/990354 "cocproxy for nginx") Nginx
 
+If you access `http://localhost:8087/http://example.com/script.js`, then the proxy get following:
+
+
+1. if found `<Current Directory>/example.com/script.js` 
+    - access to `<Current Directory>/example.com/script.js`
+2. if not found
+    - access to `http://example.com/script.js`
+
+
 ## Installation
 
 - [ ] Describe the installation process
