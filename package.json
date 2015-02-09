@@ -21,8 +21,6 @@
     "url": "https://github.com/azu/node-cocproxy/issues"
   },
   "dependencies": {
-    "hoxy": "^1.2.2",
-    "http-mitm-proxy": "git://github.com/joeferner/node-http-mitm-proxy",
-    "http-proxy": "^1.8.1"
+    "hoxy": "^1.2.2"
   }
 }
