@@ -1,4 +1,4 @@
-# node-CocProxy
+# node-CocProxy [![Build Status](https://travis-ci.org/azu/node-cocproxy.svg)](https://travis-ci.org/azu/node-cocproxy)
 
 Convention over Configuration written in Node.js.
 
