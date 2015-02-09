@@ -1,6 +1,6 @@
 # node-CocProxy [![Build Status](https://travis-ci.org/azu/node-cocproxy.svg)](https://travis-ci.org/azu/node-cocproxy)
 
-Convention over Configuration written in Node.js.
+Convention over Configuration Proxy written in Node.js.
 
 - [CocProxy – CodeRepos::Share – Trac](http://coderepos.org/share/wiki/CocProxy "CocProxy – CodeRepos::Share – Trac") Ruby
 - [cocproxy for nginx](https://gist.github.com/hotchpotch/990354 "cocproxy for nginx") Nginx
