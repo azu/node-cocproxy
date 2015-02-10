@@ -16,9 +16,15 @@ If you access `http://localhost:8087/http://example.com/script.js`, then the pro
 
 ## Installation
 
-- [ ] Describe the installation process
+```
+npm install -g cocproxy
+```
 
 ## Usage
+
+## Command Line
+
+
 
 ## Node API
 

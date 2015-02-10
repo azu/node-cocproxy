@@ -1,6 +1,12 @@
 {
   "name": "cocproxy",
   "description": "cocproxy on Node.js",
+  "keywords": [
+    "proxy",
+    "reverse-proxy",
+    "debug",
+    "http"
+  ],
   "version": "1.0.0",
   "homepage": "https://github.com/azu/node-cocproxy/",
   "repository": {
@@ -8,6 +14,9 @@
     "url": "https://github.com/azu/node-cocproxy.git"
   },
   "main": "index.js",
+  "bin": {
+    "cocproxy": "bin/cli.js"
+  },
   "scripts": {
     "start": "node lib/cocproxy.js",
     "test": "mocha test/*.js"
