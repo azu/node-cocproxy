@@ -22,7 +22,8 @@
   },
   "dependencies": {
     "hoxy": "^1.2.2",
-    "object-assign": "^2.0.0"
+    "object-assign": "^2.0.0",
+    "optionator": "^0.5.0"
   },
   "devDependencies": {
     "espower-loader": "^0.10.0",
