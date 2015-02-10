@@ -24,7 +24,22 @@ npm install -g cocproxy
 
 ## Command Line
 
+```
+$ cocproxy [options]
 
+Options:
+  -h, --help         Show help.
+  -v, --version      Outputs the version number.
+  -d, --mock-file-dir path::String  Set mock file from this directory
+  -p, --port Number  Set port number to thi proxy
+```
+
+1. run `$ cocproxy -p 8098`
+2. set proxy url for browser
+    - localhost:8098
+3. Access  http://example.com/example.css
+    - if found `<WORKING_ROOT>/example.com/example.css`, then return this local file.
+    - if couldn't found, then return http://example.com/example.css
 
 ## Node API
 
