@@ -22,12 +22,13 @@ describe("CocProxy", function () {
         context("when found the file is match the url", function () {
             beforeEach(function () {
                 cocProxy = new CocProxy({
+                    port : 21028,
                     mockFileDir : fixtureDir
                 });
-                cocProxy.start()
+                cocProxy.start();
             });
             it("should return the content of local file", function (done) {
-                http.get("http://localhost:8087/http://example.com/script.js", function (res) {
+                http.get("http://localhost:21028/http://example.com/script.js", function (res) {
                     var body = '';
                     res.setEncoding('utf8');
                     res.on('data', function (chunk) {
