@@ -15,6 +15,12 @@ describe("findInLocal", function () {
             assert(hasFileInLocal(url, fixtureDir));
         });
     });
+    context("when find the directory is match the url", function () {
+        it("should return false", function () {
+            var url = "http://example.com/";
+            assert(!hasFileInLocal(url, fixtureDir));
+        });
+    });
     context("when not exits the file", function () {
         it("should return false", function () {
             var url = "http://example.com/not_found.js";
